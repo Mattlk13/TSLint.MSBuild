@@ -23,6 +23,7 @@
 
     <PropertyGroup>
       <TSLintBreakBuildOnError Condition="'$(TSLintBreakBuildOnError)' == ''">false</TSLintBreakBuildOnError>
+      <TSLintCreateTimestampFile Condition="'$(TSLintCreateTimestampFile)' == ''">true</TSLintCreateTimestampFile>
       <TSLintFormat Condition="'$(TSLintFormat)' == ''">msbuild</TSLintFormat>
       <TSLintNodeExe Condition="'$(TSLintNodeExe)' == ''">$([System.IO.Path]::GetFullPath("$(MSBuildThisFileDirectory)..\tools\node-7.3.0.exe"))</TSLintNodeExe>
       <TSLintTimeout Condition="'$(TSLintTimeout)' == ''">10000000</TSLintTimeout>
@@ -65,8 +66,9 @@
     <Error Condition="'$(TSLintFileListDisabled)' == 'true' And '$(TSLintProject)' == ''" Text="You disabled file listing on the command line using TSLintFileDisabled, but did not specify a project file with TSLintProject." />
 
     <MakeDir Directories="$(OutputPath)" />
-    
+
     <Touch
+      Condition="'$(TSLintCreateTimestampFile)' == 'true'"
       AlwaysCreate="true"
       Files="$(TSLintTimestampFile)" />
 
