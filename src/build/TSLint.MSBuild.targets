@@ -67,11 +67,6 @@
 
     <MakeDir Directories="$(OutputPath)" />
 
-    <Touch
-      Condition="'$(TSLintCreateTimestampFile)' == 'true'"
-      AlwaysCreate="true"
-      Files="$(TSLintTimestampFile)" />
-
     <!-- Run TSLint using the Node executable -->
     <Exec
       Command="&quot;$(TSLintNodeExe)&quot; &quot;$(TSLintCli)&quot; $(TSLintArgs)"
@@ -83,6 +78,11 @@
       <Output TaskParameter="ConsoleOutput" ItemName="TSLintOutput" />
       <Output TaskParameter="ExitCode" PropertyName="TSLintErrorCode" />
     </Exec>
+
+    <Touch
+      Condition="'$(TSLintCreateTimestampFile)' == 'true' and $(TSLintErrorCode) == 0"
+      AlwaysCreate="true"
+      Files="$(TSLintTimestampFile)" />
 
     <!-- Return an error if TSLint returned an exit code and we should break on errors -->
     <Error Condition="'$(TSLintErrorCode)' != '0' and '$(TSLintBreakBuildOnError)' == 'true'" Text="TSLint checks failed" />
