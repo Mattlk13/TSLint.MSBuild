@@ -2,7 +2,8 @@
 
 [![NuGet Version and Downloads count](https://buildstats.info/nuget/TSLint.MSBuild)](https://www.nuget.org/packages/TSLint.MSBuild) 
 
-An MSBuild target for linting TypeScript code using [TSLint](https://github.com/palantir/tslint). Get it at [nuget.org](https://www.nuget.org/packages/TSLint.MSBuild/).
+An MSBuild target for linting TypeScript code using [TSLint](https://github.com/palantir/tslint).
+Get it at [nuget.org](https://www.nuget.org/packages/TSLint.MSBuild/).
 
 ## Usage
 
@@ -113,7 +114,7 @@ Read the [TSLint documentation](https://github.com/palantir/tslint) for TSLint-s
         <tr>
             <th><code>TSLintNodeExe</code></th>
             <td>Path to a Node executable to execute the runner script.</td>
-            <td>The <code>tools\node-7.3.0.exe</code> in the package.</td>
+            <td>The <code>tools\node-12.4.0.exe</code> in the package.</td>
         </tr>
         <tr>
             <th><code>TSLintProject</code></th>
@@ -122,7 +123,7 @@ Read the [TSLint documentation](https://github.com/palantir/tslint) for TSLint-s
         </tr>
         <tr>
             <th><code>TSLintRunOutsideBuildingProject</code></th>
-            <td>Whether to run even if `BuildingProject` isn't `true`.</td>
+            <td>Whether to run even if <code>BuildingProject</code> isn't <code>true</code>.</td>
             <td><em><code>(blank)</code></em></td>
         </tr>
         <tr>
@@ -196,8 +197,8 @@ npm install -g gulp
 npm install
 ```
 
-Run `gulp` to build.
-`gulp test` just runs tests.
+Run `npx gulp default` to build.
+`npx gulp test` just runs tests.
 
 ### Updating the version
 
