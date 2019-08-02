@@ -1,13 +1,15 @@
 # TSLint for MSBuild
 
-[![NuGet Version and Downloads count](https://buildstats.info/nuget/TSLint.MSBuild)](https://www.nuget.org/packages/TSLint.MSBuild) 
+[![NuGet Version and Downloads count](https://buildstats.info/nuget/TSLint.MSBuild)](https://www.nuget.org/packages/TSLint.MSBuild)
 
 An MSBuild target for linting TypeScript code using [TSLint](https://github.com/palantir/tslint).
 Get it at [nuget.org](https://www.nuget.org/packages/TSLint.MSBuild/).
 
+⚠️ TSLint will be deprecated some time in 2019. See this issue for more details: [Roadmap: TSLint → ESLint](https://github.com/palantir/tslint/issues/4534).
+
 ## Usage
 
-Add this package and [TSLint](https://nuget.org/packages/TSLint) using your NuGet Package Manager. 
+Add this package and [TSLint](https://nuget.org/packages/TSLint) using your NuGet Package Manager.
 It should be automatically added to your project.
 
 TSLint's default configurations are used by default.
@@ -180,13 +182,12 @@ Read the [TSLint documentation](https://github.com/palantir/tslint) for TSLint-s
 
 ### TSLint version
 
-The *first* available TSLint version in your NuGet packages directory will be used. 
+The _first_ available TSLint version in your NuGet packages directory will be used.
 
 ### Errata
 
 You can exclude `.d.ts` files using `<TSLintExclude Include="%2A%2A/%2A.d.ts" />`.
 MSBuild escapes `*` and other special characters using `%` and their hexadecimal value.
-
 
 ## Development
 
