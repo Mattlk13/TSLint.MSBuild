@@ -5,7 +5,7 @@
 An MSBuild target for linting TypeScript code using [TSLint](https://github.com/palantir/tslint).
 Get it at [nuget.org](https://www.nuget.org/packages/TSLint.MSBuild/).
 
-⚠️ TSLint will be deprecated some time in 2019. See this issue for more details: [Roadmap: TSLint → ESLint](https://github.com/palantir/tslint/issues/4534).
+⚠️ **TSLint is deprecated**. See this issue for more details: [Roadmap: TSLint → ESLint](https://github.com/palantir/tslint/issues/4534). ⚠️
 
 ## Usage
 
