@@ -8,10 +8,10 @@
     "url": "https://github.com/JoshuaKGoldberg/TSLint.MSBuild"
   },
   "devDependencies": {
-    "gulp": "^4.0.2",
+    "gulp": "^5.0.1",
     "gulp-msbuild": "^0.5.5",
     "gulp-nuget": "^1.2.0",
-    "request": "^2.88.0",
+    "request": "^2.88.2",
     "run-sequence": "^2.2.1"
   }
 }
